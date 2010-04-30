@@ -1,0 +1,15 @@
+<% form_for(@country) do |f| %>
+  <%= f.error_messages :class => "error", :id => nil %>
+
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :abbreviation %><br />
+    <%= f.text_field :abbreviation %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

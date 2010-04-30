@@ -69,3 +69,9 @@ hr {
 	text-align:center;
 	font-size:80%;
 	}
+
+.fieldWithErrors {
+  padding: 1px;
+  background-color: red;
+  display: table;
+}
