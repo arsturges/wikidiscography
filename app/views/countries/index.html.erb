@@ -7,10 +7,9 @@
   </tr>
 
 <% @countries.each do |country| %>
-  <tr>
-    <td><%=h country.country %></td>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= link_to country.country, country %></td>
     <td><%=h country.abbreviation %></td>
-    <td><%= link_to 'Show', country %></td>
     <td><%= link_to 'Edit', edit_country_path(country) %></td>
     <td><%= link_to 'Destroy', country, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

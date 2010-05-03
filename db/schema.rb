@@ -9,10 +9,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100429232703) do
+ActiveRecord::Schema.define(:version => 20100501224935) do
 
   create_table "countries", :force => true do |t|
     t.string   "country"
+    t.string   "abbreviation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "session_types", :force => true do |t|
+    t.string   "session_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sessions", :force => true do |t|
+    t.date     "session_date"
+    t.boolean  "circa"
+    t.string   "text_date"
+    t.string   "title"
+    t.integer  "country_id"
+    t.integer  "state_id"
+    t.integer  "session_type_id"
+    t.string   "venue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "state"
     t.string   "abbreviation"
     t.datetime "created_at"
     t.datetime "updated_at"

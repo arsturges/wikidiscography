@@ -3,15 +3,15 @@ require 'test_helper'
 
 class CountriesControllerTest < ActionController::TestCase
 
-  def teardown
-    Country.destroy_all
-  end
-
   def setup
     @c = Factory(:country)
   end
   
+  def teardown
+    Country.destroy_all
+  end
 
+  
   test "should get index" do
     get :index
     assert_response :success

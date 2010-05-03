@@ -8,10 +8,18 @@
   <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
   <%= stylesheet_link_tag 'print', :media => "print" %>
   <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  <%= stylesheet_link_tag 'styles' %>
+  <%= stylesheet_link_tag 'styles', :media => "screen, projection" %>
 </head>
   <body class="container">
-    <p style="color: green"><%= flash[:notice] %></p>
-    <%= yield %>
+    <% if flash[:notice] %>
+      <p class="success"><%= flash[:notice] %></p>
+    <% end %>
+    <div class="span-24 last" id="navigation_content">
+      <%= render :partial => 'layouts/navigation' %>
+    </div>
+
+    <div class="span-24 last" id="main_content">
+      <%= yield %>
+    </div>
   </body>
 </html>
