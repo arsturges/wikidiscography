@@ -1,12 +1,15 @@
 <h1>Listing countries</h1>
+<%= submit_tag  "toggle", :id => "toggleButton"%>
 
 <table>
-  <tr>
+  <thead>
+    <tr>
     <th>Country</th>
     <th>Abbreviation</th>
   </tr>
-
-<% @countries.each do |country| %>
+  </thead>
+  <tbody id="table-data">
+  <% @countries.each do |country| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%= link_to country.country, country %></td>
     <td><%=h country.abbreviation %></td>
@@ -14,6 +17,7 @@
     <td><%= link_to 'Destroy', country, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
