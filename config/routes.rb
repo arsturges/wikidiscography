@@ -1,13 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :sessions
+  map.resources :skills
 
-  map.resources :sessions
+  map.resources :artists
 
-  map.resources :sessions
 
-  map.resources :sessions
-
-  map.resources :sessions
+  map.resources :sessions, :collection => {:auto_complete_for_country_country => :get }
 
   map.resources :session_types
 

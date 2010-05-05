@@ -1,0 +1,28 @@
+<h1>Listing skills</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Skill</th>
+    <th>Abbreviation</th>
+    <th>Sort</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @skills.each do |skill| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h skill.skill %></td>
+    <td><%=h skill.abbreviation %></td>
+    <td><%=h skill.sort %></td>
+    <td><%= link_to 'Show', skill %></td>
+    <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
+    <td><%= link_to 'Destroy', skill, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New skill', new_skill_path %>

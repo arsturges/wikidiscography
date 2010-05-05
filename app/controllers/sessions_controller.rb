@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   # GET /sessions
   # GET /sessions.xml
+  auto_complete_for :country, :country
+
+
   def index
     @sessions = Session.all
 

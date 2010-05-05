@@ -1,11 +1,14 @@
 <h1>Listing states</h1>
 
 <table>
+  <thead>
   <tr>
     <th>State</th>
     <th>Abbreviation</th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @states.each do |state| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%= link_to state.state, state %></td>
@@ -14,6 +17,7 @@
     <td><%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

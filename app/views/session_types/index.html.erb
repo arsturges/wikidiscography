@@ -1,10 +1,13 @@
 <h1>Listing session_types</h1>
 
 <table>
+  <thead>
   <tr>
     <th>Session type</th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @session_types.each do |session_type| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%= link_to session_type.session_type, session_type %></td>
@@ -12,6 +15,7 @@
     <td><%= link_to 'Destroy', session_type, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

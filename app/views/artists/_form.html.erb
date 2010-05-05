@@ -1,0 +1,43 @@
+<% form_for(@artist) do |f| %>
+  <%= f.error_messages :class => "error", :id => nil %>
+
+  <p>
+    <%= f.label :first %><br />
+    <%= f.text_field :first %>
+  </p>
+  <p>
+    <%= f.label :middle %><br />
+    <%= f.text_field :middle %>
+  </p>
+  <p>
+    <%= f.label :last %><br />
+    <%= f.text_field :last %>
+  </p>
+  <p>
+    <%= f.label :display_name %><br />
+    <%= f.text_field :display_name %>
+  </p>
+  <p>
+    <%= f.label :skill_id %><br />
+    <%= f.collection_select :skill_id, Skill.all, :id, :skill  %>
+  </p>
+  <p>
+    <%= f.label :birth %><br />
+    <%= f.date_select :birth %>
+  </p>
+  <p>
+    <%= f.label :death %><br />
+    <%= f.date_select :death %>
+  </p>
+  <p>
+    <%= f.label :birth_place %><br />
+    <%= f.text_field :birth_place %>
+  </p>
+  <p>
+    <%= f.label :death_place %><br />
+    <%= f.text_field :death_place %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

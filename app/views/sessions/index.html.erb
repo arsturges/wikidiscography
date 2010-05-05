@@ -1,6 +1,7 @@
 <h1>Listing sessions</h1>
 
 <table>
+  <thead>
   <tr>
     <th>Session date</th>
     <th>Circa</th>
@@ -11,7 +12,9 @@
     <th>Session type</th>
     <th>Venue</th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @sessions.each do |session| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%=h session.session_date %></td>
@@ -27,6 +30,7 @@
     <td><%= link_to 'Destroy', session, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

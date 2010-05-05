@@ -1,0 +1,40 @@
+<h1>Listing artists</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>First</th>
+    <th>Middle</th>
+    <th>Last</th>
+    <th>Display name</th>
+    <th>Skill</th>
+    <th>Birth</th>
+    <th>Death</th>
+    <th>Birth place</th>
+    <th>Death place</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @artists.each do |artist| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h artist.first %></td>
+    <td><%=h artist.middle %></td>
+    <td><%=h artist.last %></td>
+    <td><%=h artist.display_name %></td>
+    <td><%=h artist.skill_id %></td>
+    <td><%=h artist.birth %></td>
+    <td><%=h artist.death %></td>
+    <td><%=h artist.birth_place %></td>
+    <td><%=h artist.death_place %></td>
+    <td><%= link_to 'Show', artist %></td>
+    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+    <td><%= link_to 'Destroy', artist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New artist', new_artist_path %>
