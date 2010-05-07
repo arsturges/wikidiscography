@@ -9,9 +9,9 @@ class SongFormTest < ActiveSupport::TestCase
     s=SongForm.new
     assert !s.save
 
-    s.title = "new song form"
+    s.song_form = "new song form"
     assert !s.save
-    s.title = "update title"
+    s.song_form = "update title"
     assert s.save
   end
 end

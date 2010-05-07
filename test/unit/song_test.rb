@@ -9,11 +9,9 @@ class SongTest < ActiveSupport::TestCase
     assert a.save
     s = Song.new
     assert !s.save
-    s.title = "new title" #not unique, and no song_form_id
+    s.title = "new title" #not unique, and no song_form_id. Dopesnt' have to be unique
     assert !s.save
     s.song_form_id = 1
-    assert !s.save #still not inuqe title
-    s.title = "updated tile"
     assert s.save
     end
 end
