@@ -1,0 +1,11 @@
+<% form_for(@song_form) do |f| %>
+  <%= f.error_messages :class => "error", :id => nil  %>
+
+  <p>
+    <%= f.label :song_form %><br />
+    <%= f.text_field :song_form %>
+  </p>
+  <p>
+    <%= f.submit 'save' %>
+  </p>
+<% end %>

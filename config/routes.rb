@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :song_forms
+
+  map.resources :songs
+
   map.resources :skills
 
   map.resources :artists

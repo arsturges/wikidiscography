@@ -44,6 +44,15 @@ Factory.define :skill do |s|
   s.sort { Factory.next(:integer) }
 end
 
+Factory.define :song do |s|
+  s.title { Factory.next(:string) }
+  s.association :song_form
+end
+
+Factory.define :song_form do |s|
+  s.song_form { Factory.next(:string) }
+end
+
 Factory.define :state do |s|
   s.state { Factory.next(:string) }
   s.abbreviation { Factory.next(:string) }

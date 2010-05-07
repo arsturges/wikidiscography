@@ -1,0 +1,26 @@
+<h1>Listing songs</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Song form</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @songs.each do |song| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h song.title %></td>
+    <td><%=h song.song_form_id %></td>
+    <td><%= link_to 'Show', song %></td>
+    <td><%= link_to 'Edit', edit_song_path(song) %></td>
+    <td><%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New song', new_song_path %>
