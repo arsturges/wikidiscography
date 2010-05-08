@@ -1,0 +1,22 @@
+id,format,cCategory,sort
+15,78,Format,1
+16,"78 12\"",Format""",2,
+14,45,Format,3
+33,"45 12\"",Format""",4,
+25,"EP 7\"",Format""",5,
+24,"LP 7\"",Format""",6,
+13,"LP 10\"",Format""",7,
+12,"LP 12\"",Format""",8,
+18,Reel,Format,9
+19,8-Track,Format,10
+17,Cassette,Format,11
+20,DAT,Format,12
+21,Mini,Format,13
+22,MP3,Format,14
+11,CD,Format,15
+35,"CD 3\"",Format""",16,
+28,SACD,Format,17
+32,VHS,Format,18
+31,LaserDisc,Format,19
+29,DVD,Format,20
+34,Piano Roll,Format,21
