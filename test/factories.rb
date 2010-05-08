@@ -8,7 +8,6 @@ end
 
 Factory.define :artist do |a|
   a.first { Factory.next(:string) }
-  a.middle { Factory.next(:string) }
   a.last { Factory.next(:string) }
   a.display_name {|b| "#{b.first} #{b.last}" }
   a.association :skill
@@ -21,6 +20,16 @@ end
 Factory.define :country do |c|
   c.country { Factory.next(:string) }
   c.abbreviation { Factory.next(:string) }
+end
+
+Factory.define :label do |l|
+  l.label { Factory.next(:string) }
+  l.association :country
+end
+
+Factory.define :medium do |m|
+  m.medium { Factory.next(:string) }
+  m.sort { Factory.next(:integer) }
 end
 
 Factory.define :session do |s|

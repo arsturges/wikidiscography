@@ -2,7 +2,6 @@ class CreateArtists < ActiveRecord::Migration
   def self.up
     create_table :artists do |t|
       t.string :first
-      t.string :middle
       t.string :last
       t.string :display_name
       t.integer :skill_id

@@ -1,0 +1,26 @@
+<h1>Listing media</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Medium</th>
+    <th>Sort</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @media.each do |medium| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h medium.medium %></td>
+    <td><%=h medium.sort %></td>
+    <td><%= link_to 'Show', medium %></td>
+    <td><%= link_to 'Edit', edit_medium_path(medium) %></td>
+    <td><%= link_to 'Destroy', medium, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New medium', new_medium_path %>

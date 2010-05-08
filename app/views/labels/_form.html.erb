@@ -1,0 +1,15 @@
+<% form_for(@label) do |f| %>
+  <%= f.error_messages :class => "error", :id => nil %>
+
+  <p>
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </p>
+  <p>
+    <%= f.label :country_id %><br />
+    <%= f.collection_select :country_id, Country.all, :id, :country, {:selected => 233} %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

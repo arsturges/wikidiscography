@@ -9,11 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100507004044) do
+ActiveRecord::Schema.define(:version => 20100508072447) do
 
   create_table "artists", :force => true do |t|
     t.string   "first"
-    t.string   "middle"
     t.string   "last"
     t.string   "display_name"
     t.integer  "skill_id"
@@ -28,6 +27,20 @@ ActiveRecord::Schema.define(:version => 20100507004044) do
   create_table "countries", :force => true do |t|
     t.string   "country"
     t.string   "abbreviation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "labels", :force => true do |t|
+    t.string   "label"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "media", :force => true do |t|
+    t.string   "medium"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

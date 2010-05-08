@@ -10,6 +10,7 @@
   <tbody>
   <% @countries.each do |country| %>
   <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= country.id %> </td>
     <td><%= link_to country.country, country %></td>
     <td><%=h country.abbreviation %></td>
     <td><%= link_to 'Edit', edit_country_path(country) %></td>

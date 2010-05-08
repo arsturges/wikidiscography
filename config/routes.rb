@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :labels
+
+  map.resources :media
+
   map.resources :song_forms
 
   map.resources :songs
@@ -6,7 +10,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :skills
 
   map.resources :artists
-
 
   map.resources :sessions, :collection => {:auto_complete_for_country_country => :get }
 

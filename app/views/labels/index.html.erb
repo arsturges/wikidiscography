@@ -1,0 +1,26 @@
+<h1>Listing labels</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Label</th>
+    <th>Country</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @labels.each do |label| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h label.label %></td>
+    <td><%=h label.country.country %></td>
+    <td><%= link_to 'Show', label %></td>
+    <td><%= link_to 'Edit', edit_label_path(label) %></td>
+    <td><%= link_to 'Destroy', label, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New label', new_label_path %>

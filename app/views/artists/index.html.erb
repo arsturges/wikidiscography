@@ -4,7 +4,6 @@
   <thead>
   <tr>
     <th>First</th>
-    <th>Middle</th>
     <th>Last</th>
     <th>Display name</th>
     <th>Skill</th>
@@ -19,7 +18,6 @@
 <% @artists.each do |artist| %>
   <tr class="<%= cycle('odd', 'even') %>">
     <td><%=h artist.first %></td>
-    <td><%=h artist.middle %></td>
     <td><%=h artist.last %></td>
     <td><%=h artist.display_name %></td>
     <td><%=h artist.skill_id %></td>
