@@ -2,7 +2,7 @@ class LabelsController < ApplicationController
   # GET /labels
   # GET /labels.xml
   def index
-    @labels = Label.all
+    @labels = Label.all(:include => [:country])
 
     respond_to do |format|
       format.html # index.html.erb
