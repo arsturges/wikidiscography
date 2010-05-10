@@ -1,43 +1,33 @@
 == The Wikidiscography Project
 
 Q. Why another online discography?
-A. All of the discographies I know of are simply lists of albums with a lot of information about each track,
-e.g. personnel, instruments, titles, length. Wikidiscography aims to be the fist discography to be based on
-sessions instead of albums. That means starting at the recording session itself instead of just listing album
-information.
+A. All of the discographies I know of are simply lists of albums with a lot of information about each track, e.g. personnel, instruments, titles, length. Wikidiscography aims to be the fist online discography application to be based on sessions instead of albums. That means starting at the recording session itself instead of just listing album information.
 
 Q. Why start at the recording session?
-A. Because it makes for more highly structured--and thus more easily searchable--data. Start with a recording
-session, then associate the session with performances. Each performance is associated with a song and with
-one or more performers. The session itself has a time and place, which data filters down to that session's
-performances. Each performance can then be associated with a release (an album). In this way you can continue
-adding information to sessions, performances, artists, songs, labels, and any other fields that are
-important to discographical research.
+A. Because it makes for more highly structured--and thus more easily searchable--data. Start with a recording session, then associate the session with performances. Each performance is associated with a song and with one or more performers. The session itself has a time and place, which data filters down to that session's performances. Each performance can then be associated with a release (an album). In this way you can continue adding information to sessions, performances, artists, songs, labels, and any other fields that are important to discographical research. All of the information is properly linked together, so any range of queries is possible.
 
 Q. What will be the scope of this site?
-A. The field of discography--and especially session-based discography--comes primarily from the jazz field,
-and this site will cater to those interested in jazz research.
+A. The field of discography--and especially session-based discography--comes primarily from the jazz field, and this site will cater to those interested in jazz research.
 
 Q. What's wrong with the current discography sites?
 Currently, the largest discography sites seem to be:
 * discogs.com
 * jazzdisco.org
 * musicbrainz.org
-Each of these is an album-based site, which limits possible search queries. With these sites, for example, one
-could ask for ask for all the performances of "Four" that included Miles Davis and John Coltrane, but not all of
-the performances of "Four" that DIDN'T include Miles Davis and John Coltrane.
+Each of these is an album-based site, which limits possible search queries. With these sites, for example, one could ask for ask for all the performances of "Four" that included Miles Davis and John Coltrane, but not all of the performances of "Four" that DIDN'T include Miles Davis and John Coltrane.
+
+Q. What about jazzdiscography.com?
+A. Steve Albin and Mike Fitzgerald host the only true session-based discography I've seen. Their work is a model and inspiration for this project. The Brian desktop application, now in its 7th release, closely resembles what I'd like to accomplish with a web application. I'm grateful to Steve and Mike for their patience and support as I tried my hand at discography in my days as a grad student; I learned a great deal from both of them.
 
 Q. What's your vision for this site?
-A. This will be a community-based site, with every user able to add and edit information.  I hope to seed it
-with something significant, such as the complete Frank Sinatra discography or the complete Blue Note
-records discography. Eventually I'd like to add an iTunes/Amazon link to each performance so that users can
-immediately hear a track or purchase an album.
+A. This will be a community-based site, with every user able to add and edit information.  I hope to seed it with something significant, such as the complete Frank Sinatra discography or the complete Blue Note records discography. Eventually I'd like to add an iTunes/Amazon link to each performance so that users can immediately hear a track or purchase an album.
+
+Q. What tools are you using?
+A. Ruby on Rails (rubyonrails.org) for the web application framework. BlueprintCSS (www.blueprintcss.org) for the CSS framework. SQLite (www.sqlite.org) for the database.
 
 Q. Why are you doing this?
-A. I am fascinated by programming and by the open-source community. I really enjoy learning abour programming.
-I'm hoping to add something useful to the world, and I believe in the open source software model. If,
-someday, somebody forks this project, improves it, and gives me a pull request, my life will be complete.
+A. I am fascinated by programming and by the open-source community, and I really enjoy learning about programming.
+I'm hoping to add something useful to the world, and I believe in the open source software model. If, someday, somebody forks this project, improves it, and gives me a pull request, my life will be complete.
 
 Q. Who are you?
-A. My name's Andy. I'm a researcher at a Department of Energy laboratory in California (lbl.gov). Jazz
-discography is something I happen to have some expertise in, because have an MA in Jazz History from Rutgers.
+A. My name's Andy. I'm a researcher at a Department of Energy laboratory in California (lbl.gov). Jazz discography is something I happen to have some expertise in from my studies at the Institute for Jazz Studies at Rutgers University in New Jersey. As I become more skilled in web application development (a large part of my role in my current position at lbl.gov), I hope to join these two skill sets and produce something meaningful for the jazz research community.
