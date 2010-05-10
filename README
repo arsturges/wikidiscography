@@ -20,7 +20,7 @@ Q. What about jazzdiscography.com?
 A. Steve Albin and Mike Fitzgerald host the only true session-based discography I've seen. Their work is a model and inspiration for this project. The Brian desktop application, now in its 7th release, closely resembles what I'd like to accomplish with a web application. I'm grateful to Steve and Mike for their patience and support as I tried my hand at discography in my days as a grad student; I learned a great deal from both of them.
 
 Q. What's your vision for this site?
-A. This will be a community-based site, with every user able to add and edit information.  I hope to seed it with something significant, such as the complete Frank Sinatra discography or the complete Blue Note records discography. Eventually I'd like to add an iTunes/Amazon link to each performance so that users can immediately hear a track or purchase an album.
+A. This will be a community-based site, with every user able to add and edit information.  I hope to seed it with something significant, such as the complete ODJB discography or the complete Blue Note records discography. Eventually I'd like to add an iTunes/Amazon link to each performance so that users can immediately hear a track or purchase an album.
 
 Q. What tools are you using?
 A. Ruby on Rails (www.rubyonrails.org) for the web application framework. BlueprintCSS (www.blueprintcss.org) for the CSS framework. SQLite (www.sqlite.org) for the database.
