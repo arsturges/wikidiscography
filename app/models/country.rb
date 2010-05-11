@@ -4,4 +4,7 @@ class Country < ActiveRecord::Base
 
   has_many :sessions
   has_many :labels
+
+  cattr_reader :per_page
+  @@per_page = 150
 end
