@@ -5,4 +5,6 @@ class Session < ActiveRecord::Base
   belongs_to :country
   belongs_to :state
   belongs_to :session_type
+
+  has_many :performances
 end

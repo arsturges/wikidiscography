@@ -1,0 +1,37 @@
+<h1>Listing performances</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Session</th>
+    <th>Song</th>
+    <th>Performance type</th>
+    <th>Duration</th>
+    <th>Medley</th>
+    <th>Matrix</th>
+    <th>Medley</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @performances.each do |performance| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%=h performance.session_id %></td>
+    <td><%=h performance.song_id %></td>
+    <td><%=h performance.performance_type %></td>
+    <td><%=h performance.duration %></td>
+    <td><%=h performance.medley %></td>
+    <td><%=h performance.matrix %></td>
+    <td><%=h performance.medley_id %></td>
+    <td><%= link_to 'Show', performance %></td>
+    <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+    <td><%= link_to 'Destroy', performance, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+<%= will_paginate @performances %>
+
+<br />
+
+<%= link_to 'New performance', new_performance_path %>

@@ -36,6 +36,13 @@ Factory.define :performance_type do |p|
   p.performance_type { Factory.next(:string) }
 end
 
+Factory.define :performance do |p|
+  p.association :session
+  p.association :song
+  p.association :performance_type
+  p.duration "00:03:24"
+end
+
 Factory.define :session do |s|
   s.session_date Date.today
   s.circa nil
