@@ -20,7 +20,7 @@
     <td><%=h artist.first %></td>
     <td><%=h artist.last %></td>
     <td><%=h artist.display_name %></td>
-    <td><%=h artist.skill_id %></td>
+    <td><%=h artist.skill.try(:skill) %></td>
     <td><%=h artist.birth %></td>
     <td><%=h artist.death %></td>
     <td><%=h artist.birth_place %></td>
@@ -32,6 +32,7 @@
 <% end %>
   </tbody>
 </table>
+<%= will_paginate @artists %>
 
 <br />
 

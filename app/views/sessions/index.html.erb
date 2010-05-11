@@ -21,9 +21,9 @@
     <td><%=h session.circa %></td>
     <td><%=h session.text_date %></td>
     <td><%=h session.title %></td>
-    <td><%=h session.country_id %></td>
-    <td><%=h session.state_id %></td>
-    <td><%=h session.session_type_id %></td>
+    <td><%=h session.country.country %></td>
+    <td><%=h session.state.try(:state) %></td>
+    <td><%=h session.session_type.session_type %></td>
     <td><%=h session.venue %></td>
     <td><%= link_to 'Show', session %></td>
     <td><%= link_to 'Edit', edit_session_path(session) %></td>

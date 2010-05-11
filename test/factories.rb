@@ -32,6 +32,10 @@ Factory.define :medium do |m|
   m.sort { Factory.next(:integer) }
 end
 
+Factory.define :performance_type do |p|
+  p.performance_type { Factory.next(:string) }
+end
+
 Factory.define :session do |s|
   s.session_date Date.today
   s.circa nil
@@ -55,7 +59,10 @@ end
 
 Factory.define :song do |s|
   s.title { Factory.next(:string) }
+  s.sort_title { Factory.next(:string) }
   s.association :song_form
+  s.description { Factory.next(:string) }
+  s.contrafact_id 2
 end
 
 Factory.define :song_form do |s|

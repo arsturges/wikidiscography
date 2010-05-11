@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :performance_types
+
   map.resources :labels
 
   map.resources :media

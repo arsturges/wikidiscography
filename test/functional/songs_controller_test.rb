@@ -23,7 +23,12 @@ class SongsControllerTest < ActionController::TestCase
 
   test "should create song" do
     assert_difference('Song.count') do
-      post :create, :song => { :title => "new song", :song_form_id => 1 }
+      post :create, :song => {  :title => "new song",
+                                :sort_title => "sort title here",
+                                :song_form_id => 1,
+                                :description => "A long description that disambiguates the song in question",
+                                :contrafact_id => 1
+                              }
     end
 
     assert_redirected_to song_path(assigns(:song))

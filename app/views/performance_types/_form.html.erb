@@ -1,0 +1,11 @@
+<% form_for(@performance_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :performance_type %><br />
+    <%= f.text_field :performance_type %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

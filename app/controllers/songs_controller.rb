@@ -2,7 +2,7 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.xml
   def index
-    @songs = Song.all
+    @songs = Song.paginate :page => params[:page], :order => 'sort_title ASC'
 
     respond_to do |format|
       format.html # index.html.erb

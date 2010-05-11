@@ -6,8 +6,20 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= f.label :sort_title %><br />
+    <%= f.text_field :sort_title %>
+  </p>
+  <p>
     <%= f.label :song_form_id %><br />
      <%= f.collection_select :song_form_id, SongForm.all, :id, :song_form  %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :contrafact_id %><br />
+    <%= f.text_field :contrafact_id %>
   </p>
   <p>
     <%= f.submit 'Save' %>

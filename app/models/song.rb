@@ -3,4 +3,7 @@ class Song < ActiveRecord::Base
   validates_numericality_of :song_form_id
 
   belongs_to :song_form
+
+  cattr_reader :per_page
+  @@per_page = 150
 end

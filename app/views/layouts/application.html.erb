@@ -12,13 +12,13 @@
   <%= stylesheet_link_tag 'styles', :media => "screen, projection" %>
 </head>
   <body class="container">
-    <% if flash[:notice] %>
-      <p class="success"><%= flash[:notice] %></p>
-    <% end %>
     <div class="span-24 last" id="navigation_content">
       <%= render :partial => 'layouts/navigation' %>
     </div>
 
+    <% if flash[:notice] %>
+      <p class="success span-24 last"><%= flash[:notice] %></p>
+    <% end %>
     <div class="span-24 last" id="main_content">
       <%= yield %>
     </div>
