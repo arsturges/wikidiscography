@@ -2,7 +2,7 @@ class LabelsController < ApplicationController
   # GET /labels
   # GET /labels.xml
   def index
-    @labels = Label.paginate :page => params[:page], :order => 'label ASC'
+    @labels = Label.paginate :page => params[:page], :order => 'label ASC', :include => [:country]
 
     respond_to do |format|
       format.html # index.html.erb

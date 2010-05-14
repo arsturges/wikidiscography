@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.xml
   def index
-    @artists = Artist.paginate :page => params[:page], :order => 'last ASC'
+    @artists = Artist.paginate :page => params[:page], :order => 'last ASC', :include => [:skill]
 
     respond_to do |format|
       format.html # index.html.erb
