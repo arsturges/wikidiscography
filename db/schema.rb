@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100511064112) do
+ActiveRecord::Schema.define(:version => 20100515001239) do
 
   create_table "artists", :force => true do |t|
     t.string   "first"
@@ -59,6 +59,19 @@ ActiveRecord::Schema.define(:version => 20100511064112) do
     t.boolean  "medley"
     t.string   "matrix"
     t.integer  "medley_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "releases", :force => true do |t|
+    t.string   "title"
+    t.string   "sort_title"
+    t.integer  "label_id"
+    t.string   "catalogue_number"
+    t.date     "issue_date"
+    t.integer  "medium_id"
+    t.string   "ASIN"
+    t.integer  "volumes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -43,6 +43,16 @@ Factory.define :performance do |p|
   p.duration "00:03:24"
 end
 
+Factory.define :release do |r|
+  r.title { Factory.next(:string) }
+  r.sort_title { Factory.next(:string) }
+  r.association :label
+  r.catalogue_number { Factory.next(:string) }
+  r.issue_date Date.today - 3.years
+  r.association :medium
+  r.volumes { Factory.next(:integer) }
+end
+
 Factory.define :session do |s|
   s.session_date Date.today
   s.circa nil

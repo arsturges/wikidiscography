@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :releases
+
   map.resources :performances
 
   map.resources :performance_types
