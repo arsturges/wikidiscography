@@ -26,7 +26,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "should create session" do
     assert_difference('Session.count') do
-      post :create, :session => { :session_date => 2010-05-01, :country_id => 1  }
+      post :create, :session => { :session_date => 2010-10-16, :country_id => 5  }
     end
 
     assert_redirected_to session_path(assigns(:session))
