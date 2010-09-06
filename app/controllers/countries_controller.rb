@@ -1,45 +1,25 @@
 class CountriesController < ApplicationController
-  # GET /countries
-  # GET /countries.xml
+respond_to :html, :xml, :json
+
   def index
     @countries = Country.paginate :page => params[:page], :order => 'country ASC'
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @countries }
-      format.json { render :json => @countries }
-    end
+    respond_with(@countries)
   end
 
-  # GET /countries/1
-  # GET /countries/1.xml
   def show
     @country = Country.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @country }
-    end
+    respond_with(@country)
   end
 
-  # GET /countries/new
-  # GET /countries/new.xml
   def new
     @country = Country.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @country }
-    end
+    respond_with(@country)
   end
 
-  # GET /countries/1/edit
   def edit
     @country = Country.find(params[:id])
   end
 
-  # POST /countries
-  # POST /countries.xml
   def create
     @country = Country.new(params[:country])
 

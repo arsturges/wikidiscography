@@ -1,35 +1,19 @@
 class MediaController < ApplicationController
-  # GET /media
-  # GET /media.xml
+  respond_to :html, :xml, :json
+
   def index
     @media = Medium.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @media }
-    end
+    respond_with(@media)
   end
 
-  # GET /media/1
-  # GET /media/1.xml
   def show
     @medium = Medium.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @medium }
-    end
+    respond_with(@medium)
   end
 
-  # GET /media/new
-  # GET /media/new.xml
   def new
     @medium = Medium.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @medium }
-    end
+    respond_with(@medium)
   end
 
   # GET /media/1/edit
