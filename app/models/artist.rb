@@ -1,6 +1,8 @@
 class Artist < ActiveRecord::Base
-  validates_presence_of :last, :display_name, :skill_id
-  validates_numericality_of :skill_id
+  validates :last, :presence => true
+  validates :display_name, :presence => true
+  validates :skill_id, :presence => true 
+  validates_numericality_of :skill_id, :only_integer => true
 
   belongs_to :skill
 

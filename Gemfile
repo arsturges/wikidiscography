@@ -31,3 +31,7 @@ gem "will_paginate", '>3.0.pre'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :test, :development do
+  gem "rspec-rails", "~>2.1.0"
+end
