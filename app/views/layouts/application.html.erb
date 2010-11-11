@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Countries: <%= controller.action_name %></title>
-  <%= csrf_meta_tag %> #provides authenticity token for server
+  <title>Wikidiscography: <%= @title || controller.controller_name+" > "+controller.action_name %></title>
+  <%= csrf_meta_tag  %> <!--provides authenticity token for server -->
   <%= javascript_include_tag :all %>
   <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
   <%= stylesheet_link_tag 'print', :media => "print" %>
