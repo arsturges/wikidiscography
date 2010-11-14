@@ -16,6 +16,12 @@ outline-width: 1px;
   display: table;
 }
 
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
 /*============ Navigation/header styles ============*/
 #navigation {
     font-size: 2em;
@@ -54,6 +60,18 @@ a.button {
     font-size: 1.2em;
 }
 
+/* footer styles */
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
+}
 
 /* Palette color codes from colorschemedesigner.com */
 

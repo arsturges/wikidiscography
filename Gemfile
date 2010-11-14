@@ -6,8 +6,6 @@ gem 'rails', '3.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3' #this also seems to require the libsqlite3-dev and ruby-dev packages on Ubuntu.
-gem "factory_girl"#, :source => "http://gemcutter.org"
-gem "factory_girl_rails"
 gem "will_paginate", '>3.0.pre'
  
 # Use unicorn as the web server
@@ -35,4 +33,5 @@ gem "will_paginate", '>3.0.pre'
 group :test, :development do
   gem "rspec-rails", "~>2.1.0"
   gem 'webrat'
+  gem 'factory_girl_rails'
 end
