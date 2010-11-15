@@ -1,4 +1,6 @@
 Wikidiscography::Application.routes.draw do 
+  get "users/new"
+  match '/signup', :to => 'users#new'
   get "pages/home"
   get "pages/contact"
   get "pages/about"
@@ -8,6 +10,9 @@ Wikidiscography::Application.routes.draw do
   match '/help', :to => 'pages#help'
 
   resources :posts
+  resources :users
+
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +63,7 @@ Wikidiscography::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
- root :to => "home#index"
+ root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

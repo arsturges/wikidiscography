@@ -32,6 +32,6 @@ gem "will_paginate", '>3.0.pre'
 
 group :test, :development do
   gem "rspec-rails", "~>2.1.0"
-  gem 'webrat'
+  gem 'webrat', '0.7.1' #webret 0.7.2 has a "stack level too deep error bug or something
   gem 'factory_girl_rails'
 end
