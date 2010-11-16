@@ -7,6 +7,7 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3' #this also seems to require the libsqlite3-dev and ruby-dev packages on Ubuntu.
 gem "will_paginate", '>3.0.pre'
+gem 'gravatar_image_tag', '0.1.0'
  
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -32,6 +33,6 @@ gem "will_paginate", '>3.0.pre'
 
 group :test, :development do
   gem "rspec-rails", "~>2.1.0"
-  gem 'webrat', '0.7.1' #webret 0.7.2 has a "stack level too deep error bug or something
+  gem 'webrat', '0.7.1' #webret 0.7.2 has a "stack level too deep error" bug or something
   gem 'factory_girl_rails'
 end
