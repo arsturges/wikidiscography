@@ -1,5 +1,6 @@
 Wikidiscography::Application.routes.draw do 
-  match '/signup', :to => 'users#new'
+  devise_for :users
+
   get "pages/home"
   get "pages/contact"
   get "pages/about"
@@ -9,9 +10,6 @@ Wikidiscography::Application.routes.draw do
   match '/help', :to => 'pages#help'
 
   resources :posts
-  resources :users
-
-  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -22,6 +22,7 @@
 
       <% if flash[:notice] %>
         <p class="success span-24 last"><%= flash[:notice] %></p>
+        <p class="alert"><%= alert %></p>
       <% end %>
       <section class="span-24 last" id="main_content">
         <%= yield %>
