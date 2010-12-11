@@ -3,7 +3,7 @@
 <table>
   <thead>
   <tr>
-    <th>Session</th>
+    <th>Music Session</th>
     <th>Song</th>
     <th>Performance type</th>
     <th>Duration</th>
@@ -16,7 +16,7 @@
   <tbody>
 <% @performances.each do |performance| %>
   <tr class="<%= cycle('odd', 'even') %>">
-    <td><%=h performance.session_id %></td>
+    <td><%=h performance.music_session_id %></td>
     <td><%=h performance.song_id %></td>
     <td><%=h performance.performance_type %></td>
     <td><%=h performance.duration %></td>

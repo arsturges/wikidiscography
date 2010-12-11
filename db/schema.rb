@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20101211053242) do
   end
 
   create_table "performances", :force => true do |t|
-    t.integer  "session_id"
+    t.integer  "music_session_id"
     t.integer  "song_id"
     t.integer  "performance_type_id"
     t.time     "duration"
@@ -85,20 +85,20 @@ ActiveRecord::Schema.define(:version => 20101211053242) do
     t.datetime "updated_at"
   end
 
-  create_table "session_types", :force => true do |t|
-    t.string   "session_type"
+  create_table "music_session_types", :force => true do |t|
+    t.string   "music_session_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "sessions", :force => true do |t|
-    t.date     "session_date"
+  create_table "music_sessions", :force => true do |t|
+    t.date     "music_session_date"
     t.boolean  "circa"
     t.string   "text_date"
     t.string   "title"
     t.integer  "country_id"
     t.integer  "state_id"
-    t.integer  "session_type_id"
+    t.integer  "music_session_type_id"
     t.string   "venue"
     t.datetime "created_at"
     t.datetime "updated_at"

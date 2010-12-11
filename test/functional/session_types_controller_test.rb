@@ -1,19 +1,19 @@
 require 'test_helper'
 
-class SessionTypesControllerTest < ActionController::TestCase
+class MusicSessionTypesControllerTest < ActionController::TestCase
 
   def setup
-    @s = Factory(:session_type)
+    @s = Factory(:music_session_type)
   end
 
   def teardown
-    SessionType.destroy_all
+    MusicSessionType.destroy_all
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:session_types)
+    assert_not_nil assigns(:music_session_types)
   end
 
   test "should get new" do
@@ -21,15 +21,15 @@ class SessionTypesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create session_type" do
+  test "should create music_session_type" do
     assert_difference('SessionType.count') do
-      post :create, :session_type => { :session_type => "new session type" }
+      post :create, :music_session_type => { :music_session_type => "new music_session type" }
     end
 
-    assert_redirected_to session_type_path(assigns(:session_type))
+    assert_redirected_to music_session_type_path(assigns(:music_session_type))
   end
 
-  test "should show session_type" do
+  test "should show music_session_type" do
     get :show, :id => @s.id
     assert_response :success
   end
@@ -39,16 +39,16 @@ class SessionTypesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update session_type" do
-    put :update, :id => @s.id, :session_type => {:session_type => "updated session_type" }
-    assert_redirected_to session_type_path(assigns(:session_type))
+  test "should update music_session_type" do
+    put :update, :id => @s.id, :music_session_type => {:music_session_type => "updated music_session_type" }
+    assert_redirected_to music_session_type_path(assigns(:music_session_type))
   end
 
-  test "should destroy session_type" do
+  test "should destroy music_session_type" do
     assert_difference('SessionType.count', -1) do
       delete :destroy, :id => @s.id
     end
 
-    assert_redirected_to session_types_path
+    assert_redirected_to music_session_types_path
   end
 end

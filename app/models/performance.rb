@@ -1,8 +1,8 @@
 class Performance < ActiveRecord::Base
-  validates_presence_of :session_id, :song_id, :performance_type_id
-  validates_numericality_of :session_id, :song_id, :performance_type_id
+  validates_presence_of :music_session_id, :song_id, :performance_type_id
+  validates_numericality_of :music_session_id, :song_id, :performance_type_id
 
-  belongs_to :session
+  belongs_to :music_session
   belongs_to :song
   belongs_to :performance_type
 

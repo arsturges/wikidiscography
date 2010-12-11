@@ -1,0 +1,23 @@
+<h1>Listing music_session_types</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Music session type</th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @music_session_types.each do |music_session_type| %>
+  <tr class="<%= cycle('odd', 'even') %>">
+    <td><%= link_to music_session_type.music_session_type, music_session_type %></td>
+    <td><%= link_to 'Edit', edit_music_session_type_path(music_session_type) %></td>
+    <td><%= link_to 'Destroy', music_session_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New music_session_type', new_music_session_type_path %>

@@ -1,7 +1,7 @@
 class CreatePerformances < ActiveRecord::Migration
   def self.up
     create_table :performances do |t|
-      t.integer :session_id
+      t.integer :music_session_id
       t.integer :song_id
       t.integer :performance_type_id
       t.time :duration

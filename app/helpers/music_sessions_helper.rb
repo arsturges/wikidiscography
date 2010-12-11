@@ -1,0 +1,2 @@
+module MusicSessionsHelper
+end

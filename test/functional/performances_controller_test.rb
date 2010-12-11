@@ -24,7 +24,7 @@ class PerformancesControllerTest < ActionController::TestCase
   test "should create performance" do
     assert_difference('Performance.count') do
       post :create, :performance => { 
-        :session_id => 1,
+        :musi_session_id => 1,
         :song_id => 1,
         :performance_type_id => 1,
         :duration => "00:03:00"

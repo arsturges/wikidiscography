@@ -1,22 +1,22 @@
 require 'test_helper'
 
-class SessionsControllerTest < ActionController::TestCase
+class MusicSessionsControllerTest < ActionController::TestCase
 
   def setup
-    @s = Factory(:session)
+    @s = Factory(:music_session)
   end
 
   def teardown
-    Session.destroy_all
+    MusicSession.destroy_all
     Country.destroy_all
     State.destroy_all
-    SessionType.destroy_all
+    MusicSessionType.destroy_all
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:sessions)
+    assert_not_nil assigns(:music_sessions)
   end
 
   test "should get new" do
@@ -24,15 +24,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create session" do
+  test "should create music_session" do
     assert_difference('Session.count') do
-      post :create, :session => { :session_date => 2010-10-16, :country_id => 5  }
+      post :create, :music_session => { :music_session_date => 2010-10-16, :country_id => 5  }
     end
 
-    assert_redirected_to session_path(assigns(:session))
+    assert_redirected_to music_session_path(assigns(:music_session))
   end
 
-  test "should show session" do
+  test "should show music_session" do
     get :show, :id => @s.id
     assert_response :success
   end
@@ -42,16 +42,16 @@ class SessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update session" do
-    put :update, :id => @s.id, :session => { :country_id => 3 }
-    assert_redirected_to session_path(assigns(:session))
+  test "should update music_session" do
+    put :update, :id => @s.id, :music_session => { :country_id => 3 }
+    assert_redirected_to music_session_path(assigns(:music_session))
   end
 
-  test "should destroy session" do
+  test "should destroy music_session" do
     assert_difference('Session.count', -1) do
       delete :destroy, :id => @s.id
     end
 
-    assert_redirected_to sessions_path
+    assert_redirected_to music_sessions_path
   end
 end

@@ -2,8 +2,8 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :session_id %><br />
-    <%= f.collection_select :session_id, Session.all, :id, :title %>
+    <%= f.label :music_session_id %><br />
+    <%= f.collection_select :music_session_id, MusicSession.all, :id, :title %>
   </p>
   <p>
     <%= f.label :song_id %><br />

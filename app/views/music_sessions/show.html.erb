@@ -1,0 +1,43 @@
+<p>
+  <b>Music session date:</b>
+  <%=h @music_session.music_session_date %>
+</p>
+
+<p>
+  <b>Circa:</b>
+  <%=h @music_session.circa %>
+</p>
+
+<p>
+  <b>Text date:</b>
+  <%=h @music_session.text_date %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @music_session.title %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @music_session.country_id %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @music_session.state_id %>
+</p>
+
+<p>
+  <b>Music session type:</b>
+  <%=h @music_session.music_session_type_id %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%=h @music_session.venue %>
+</p>
+
+
+<%= link_to 'Edit', edit_music_session_path(@music_session) %> |
+<%= link_to 'Back', music_sessions_path %>

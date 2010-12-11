@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SessionTypeTest < ActiveSupport::TestCase
+class MusicSessionTypeTest < ActiveSupport::TestCase
   
   test "the truth" do
     assert true

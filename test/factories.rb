@@ -37,7 +37,7 @@ Factory.define :performance_type do |p|
 end
 
 Factory.define :performance do |p|
-  p.association :session
+  p.association :music_session
   p.association :song
   p.association :performance_type
   p.duration "00:03:24"
@@ -53,19 +53,19 @@ Factory.define :release do |r|
   r.volumes { Factory.next(:integer) }
 end
 
-Factory.define :session do |s|
-  s.session_date Date.today
+Factory.define :music_session do |s|
+  s.music_session_date Date.today
   s.circa nil
   s.text_date { Factory.next(:string) }
   s.title { Factory.next(:string) }
   s.association :country
   s.association :state
-  s.association :session_type
+  s.association :music_session_type
   s.venue { Factory.next(:string) }
 end
 
-Factory.define :session_type do |s|
-  s.session_type { Factory.next(:string) }
+Factory.define :music_session_type do |s|
+  s.music_session_type { Factory.next(:string) }
 end
 
 Factory.define :skill do |s|

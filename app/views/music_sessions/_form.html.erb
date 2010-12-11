@@ -1,9 +1,9 @@
-<%= form_for(@session) do |f| %>
+<%= form_for(@music_session) do |f| %>
   <%= f.error_messages :class => "error", :id => nil%>
 
   <p>
-    <%= f.label :session_date %><br />
-    <%= f.date_select :session_date %>
+    <%= f.label :music_session_date %><br />
+    <%= f.date_select :music_session_date %>
   </p>
   <p>
     <%= f.label :circa %><br />
@@ -26,8 +26,8 @@
     <%= f.collection_select :state_id, State.all, :id, :state, {:selected => 37 } %>
   </p>
   <p>
-    <%= f.label :session_type_id %><br />
-    <%= f.collection_select :session_type_id, SessionType.all, :id, :session_type %>
+    <%= f.label :music_session_type_id %><br />
+    <%= f.collection_select :music_session_type_id, MusicSessionType.all, :id, :music_session_type %>
   </p>
   <p>
     <%= f.label :venue %><br />

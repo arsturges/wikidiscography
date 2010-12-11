@@ -77,8 +77,8 @@ Wikidiscography::Application.routes.draw do
   resources :songs
   resources :skills
   resources :artists
-  resources :sessions
-  resources :session_types
+  resources :music_sessions
+  resources :music_session_types
   resources :states
   resources :countries
 end
