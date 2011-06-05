@@ -1,2 +1,0 @@
-require 'redgreen/autotest'
-require "test_notifier/autotest"
