@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc1'
+gem "therubyracer", :require => 'v8'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -14,6 +15,14 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+end
+  
 # Use unicorn as the web server
 # gem 'unicorn'
 
