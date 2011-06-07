@@ -1,0 +1,8 @@
+make a whole page about how to contribute to the project
+1. Create a GitHub account if you don't already have one, and install Git.
+2. Install RVM.
+3. Click on the "fork me on github" banner in the top right corner.
+4. At the command line, type $ssh...
+5. Now you should have a new directory called "wikidiscography". 
+6. run bundle install
+7. create a database.yml file, put your password in it
