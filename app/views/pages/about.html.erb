@@ -3,3 +3,26 @@
 I love learning about web development, I like using Rails, and I like sharing what I learn.
 So while building this site, I occasionally post articles to 
 <a href="www.wikidiscograph.blogspot.com">wikidiscography.blogspot.com</a> detailing how I solve various issues I run in to.</p>
+
+<h2>Goals for this site</h2>
+Keeping a narrow scope and working within set boundaries can spark creativity and keep productivity up. So here are some goals/ideals/boundaries for this site to follow.
+<h3>Make it easy for others to contribute</h3>
+<p>This means keeping clear instructions on how to fork, change, push, and request a merge. 
+It also means keeping the application in such a state that anyone could clone it, run bundle install, and have a working replica, with no errors.</p>
+<h3>Write as little code as possible</h3>
+<p>The mantra of agile web developers is Keep It Simple, so I'll follow that as closely as possible. 
+When a gem exists, I'll use it instead of writing my own code. 
+Instead of re-inventing the wheel, I'll focus the application code on logic specific to this discography site. 
+This means using, perhaps, the following gems:</p>
+<ul>
+  <li>Devise: Authentication</li>
+  <li>CanCan: Authoriziation</li>
+  <li>OmniAuth: Authenticate through Facebook/Twitter/LinkedIn?</li>
+  <li>Will_paginate: simple pagination</li>
+</ul>
+<h3>Use HTML5, and keep it semantically correct</h3>
+<p>The markup should be clean and simple. 
+One way to seek some accountability on this front would be to include a link in each footer to an HTML validator that would show whether the page is valid HTML5 or not.</p>
+<h3>Use test-driven development</h3>
+<p>I'm not a great coder, and this application is relatively complicated, so new features should always come with tests.
+It will use RSpec and Factory_girl to begin with, and autotest (at least on my own computer).</p>
