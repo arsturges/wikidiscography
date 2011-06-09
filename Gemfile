@@ -21,6 +21,7 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'webrat'
 end
   
 # Use unicorn as the web server

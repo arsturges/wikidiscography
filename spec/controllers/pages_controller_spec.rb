@@ -8,12 +8,21 @@ describe PagesController do
       get 'home'
       response.should be_success
     end
+
+    it "should have the right title" do
+      get 'home'
+      response.should have_selector("title", :content => "Wikidiscography | Home")
+    end
   end
 
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'
       response.should be_success
+    end
+    it "should have the right title" do
+      get 'about'
+      response.should have_selector("title", :content => "Wikidiscography | About")
     end
   end
 
@@ -22,6 +31,9 @@ describe PagesController do
       get 'contributing'
       response.should be_success
     end
+    it "should have the right title" do
+      get 'contributing'
+      response.should have_selector("title", :content => "Wikidiscography | Contributing")
+    end
   end
-
 end
