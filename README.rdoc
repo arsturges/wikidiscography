@@ -1,0 +1,25 @@
+=The Wikidiscography Project
+This is a Rails 3.1 web application. It's aim is to be a session-based discography database that's easily searchable, and easy to contribute to (the "wiki" part). 
+
+==What is a discography?
+* http://en.wikipedia.org/wiki/Discography
+* http://www.jazzdiscography.com/Essays/philosophy.htm
+* http://www.jazzdiscography.com/Essays/obsess.htm
+* http://en.wikipedia.org/wiki/Brian_Rust
+* http://www.discogs.com/
+* http://musicbrainz.org/
+
+==Why another online discography?
+Most of the online discographies I know of are simply lists of albums with a lot of information about each track, e.g. personnel, instruments, titles, length. 
+Wikidiscography aims to be the fist online discography application to be based on sessions instead of albums. 
+That means starting at the recording session itself instead of just listing album information.
+For more information, see www.wikidiscography.com/pages/about
+
+==How to contribute
+In a nutshell, here's how to contribute to this site:
+1. Fork the repository
+2. Make changes to the code.
+3. Commit those changes and push them back to your fork.
+4. Send me a pull request.
+
+When I see your pull request, I can merge in your changes, and push the updated site back to Heroku.
