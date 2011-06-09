@@ -1,2 +1,42 @@
-<h1>Pages#contributing</h1>
-<p>Find me in app/views/pages/contributing.html.erb</p>
+<h1>How to Contribute</h1>
+<p>There are two ways to contribute to this project:
+<ol>
+  <li>Use the site and tell me what issues you run into.</li>
+  <li>Contribute code to the application itself.</li>
+</ol>
+</p>
+
+<h2>Use the site and tell me about it</h2>
+<p>Does the site make you angry? Why? Does it make you happy? Is it easy to use? Could it look better? How can I improve it? Let me know.</p>
+
+<h2>Contribte Code</h2>
+<p>It's easy to help with the site. Here's how:</p>
+<h3>Install Ruby</h3>
+<p>Go to www.ruby-lang.org to learn more.</p>
+<h3>Creat a GitHub account</h3>
+<p>GitHub has great instructions for how to set up your own account and get git running.</p>
+<h3>Install RubyGems</h3>
+<p>This manages "gems" required by the wikidiscography application.</p>
+<h3>Clone the repository</h3>
+<p>To create a local copy of the repository on your own computer, follow these commands:</p>
+<pre>
+$ git clone git://github.com/arsturges/wikidiscography.git
+$ cd wikidiscography
+$ bundle install
+$ rake db:migrate
+$ rails server
+</pre>
+<p>Now you should be running your own local copy of the application.
+Navigate to <a href="http://localhost:3000">localhost:3000</a> to see it in action.</p>
+<h3>Change some code</h3>
+<p>The next step is to start changing some code.
+Make something better. De-uglify my code. Add some tests. Update some CSS. Add a new feature.</p>
+Then commit your changes to Git:
+<pre>
+$ git add .
+$ git commit -m "I fixed your terrible code."
+$ git push
+</pre>
+Now go to your GitHub fork of the wikidiscography project, and send me a pull request. That will allow me to pull in your changes to the master branch.
+
+Thank you.
